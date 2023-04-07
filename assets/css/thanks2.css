@@ -1,0 +1,336 @@
+body {
+  background: #F2EEEE;
+  font-family: 'Domine', serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 2vw;
+  letter-spacing: 0;
+  max-width: 100vw;
+  color: #010A0D;
+  padding-top: 3.47222vw;
+  padding-bottom: 3.47222vw;
+  background: url(../img/thanks/body2.png) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 4.58015vw;
+    line-height: 7.32824vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 12.72265vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-bottom: 11.45038vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background: url(../img/thanks/body_2_mb.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus, *:active {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Domine',sans-serif;
+  font-weight: 400;
+  font-size: 1.11111vw;
+  line-height: 1.77778vw;
+  letter-spacing: 0;
+  color: #010A0D;
+}
+
+@media screen and (max-width: 767px) {
+  a {
+    font-size: 4.58015vw;
+    line-height: 7.32824vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  a {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
+
+input, textarea, button {
+  font-family: 'Domine',sans-serif;
+}
+
+.thanks {
+  width: 52.08333vw;
+  margin: auto;
+  background: #EEE9F2;
+  -webkit-box-shadow: 0px 1859px 520px rgba(44, 2, 64, 0.01), 0px 1190px 476px rgba(44, 2, 64, 0.04), 0px 669px 401px rgba(44, 2, 64, 0.15), 0px 297px 297px rgba(44, 2, 64, 0.26), 0px 74px 164px rgba(44, 2, 64, 0.29), 0px 0px 0px rgba(44, 2, 64, 0.3);
+          box-shadow: 0px 1859px 520px rgba(44, 2, 64, 0.01), 0px 1190px 476px rgba(44, 2, 64, 0.04), 0px 669px 401px rgba(44, 2, 64, 0.15), 0px 297px 297px rgba(44, 2, 64, 0.26), 0px 74px 164px rgba(44, 2, 64, 0.29), 0px 0px 0px rgba(44, 2, 64, 0.3);
+  border-radius: 10px;
+  border-radius: 0.69444vw;
+  padding-top: 2.77778vw;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks {
+    width: 94.91094vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks {
+    border-radius: 2.54453vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks {
+    padding-top: 10.17812vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks {
+    padding-top: 40px;
+  }
+}
+
+.thanks__h1 {
+  font-family: 'Parisienne';
+  font-weight: 400;
+  font-size: 5.55556vw;
+  line-height: 7.56944vw;
+  letter-spacing: 0;
+  color: #4D2270;
+  text-align: center;
+  margin-bottom: 0vw;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__h1 {
+    font-size: 15.26718vw;
+    line-height: 20.79898vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__h1 {
+    font-size: 80px;
+    line-height: 109px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__h1 {
+    margin-bottom: 1.78117vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__h1 {
+    margin-bottom: 0px;
+  }
+}
+
+.thanks__img {
+  padding-bottom: 2.70833vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__img {
+    padding-bottom: 7.63359vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__img {
+    padding-bottom: 39px;
+  }
+}
+
+.thanks__img img {
+  width: 100%;
+  height: auto;
+  max-width: 15.97222vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__img img {
+    max-width: 43.257vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__img img {
+    max-width: 230px;
+  }
+}
+
+.thanks__content {
+  background: #FFFFFF;
+  border-radius: 0.69444vw;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1.11111vw;
+  padding-left: 7.98611vw;
+  padding-right: 7.98611vw;
+  padding-bottom: 2.84722vw;
+  padding-top: 0vw;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__content {
+    border-radius: 2.54453vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__content {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__content {
+    row-gap: 3.05344vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__content {
+    row-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__content {
+    padding-left: 8.90585vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__content {
+    padding-left: 115px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__content {
+    padding-right: 8.90585vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__content {
+    padding-right: 115px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__content {
+    padding-bottom: 7.12468vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__content {
+    padding-bottom: 41px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__content {
+    padding-top: 4.07125vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__content {
+    padding-top: 0px;
+  }
+}
+
+.thanks__logo img {
+  width: 8.33333vw;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks__logo img {
+    width: 25.44529vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .thanks__logo img {
+    width: 120px;
+  }
+}
+/*# sourceMappingURL=thanks2.css.map */

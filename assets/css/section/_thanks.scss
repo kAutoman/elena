@@ -1,0 +1,181 @@
+@import "../var/var";
+@import "../var/functions";
+@import "../mixin/font-mixin";
+@import "../mixin/mixins";
+
+body{
+    background: #F2EEEE;
+    font-family: 'Domine', serif;
+    @include font(400,16,25.6,18,28.8);
+    max-width: 100vw;
+    color: #010A0D;
+    @include param(padding-top,50,30);
+    @include param(padding-bottom,50,45);
+    background: url(../img/thanks/body.png) no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+        background: url(../img/thanks/body_mb.png) no-repeat;
+        background-size: cover;
+    }
+}
+button{
+    background: none;
+    cursor: pointer;
+}
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &:focus,
+    &:active {
+        outline: none !important;
+    }
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Domine',sans-serif;
+    @include font(400,16,25.6,18,28.8);
+    color: #010A0D;
+}
+input,textarea,button{
+    font-family: 'Domine',sans-serif;
+}
+.thanks{
+    @include param(width,1140,363);
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 1859px 520px rgba(44, 2, 64, 0.01), 0px 1190px 476px rgba(44, 2, 64, 0.04), 0px 669px 401px rgba(44, 2, 64, 0.15), 0px 297px 297px rgba(44, 2, 64, 0.26), 0px 74px 164px rgba(44, 2, 64, 0.29), 0px 0px 0px rgba(44, 2, 64, 0.3);
+    @include param(border-radius,10,3);
+    @include param(padding-top,20,15);
+    @include param(padding-bottom,20,18);
+    @include param(padding-left,20,5);
+    @include param(padding-right,20,5);
+    &__container{
+        background: #FFFFFF;
+        border: 1px solid rgba(1, 10, 13, 0.2);
+        box-shadow: 0px 1859px 520px rgba(44, 2, 64, 0.01), 0px 1190px 476px rgba(44, 2, 64, 0.04), 0px 669px 401px rgba(44, 2, 64, 0.15), 0px 297px 297px rgba(44, 2, 64, 0.26), 0px 74px 164px rgba(44, 2, 64, 0.29), 0px 0px 0px rgba(44, 2, 64, 0.3);
+        @include param(border-width,1,0);
+        @include param(border-radius,3,0);
+        @include param(padding-top,40,0);
+        @include param(padding-bottom,42,0);
+        @include param(padding-left,111,0);
+        @include param(padding-right,61,0);
+        @media screen and (max-width: 767px) {
+            box-shadow: none;
+            background: none;
+        }
+    }
+    &__h1{
+        font-family: 'STIX Two Text';
+        @include font(700,38,48,26,36.4);
+        @include param(margin-bottom,12,10);
+        text-align: center;
+    }
+    &__h2{
+        font-family: 'STIX Two Text';
+        @include font(600,32,40,26,36.4);
+        @include param(margin-bottom,27,30);
+        text-align: center;
+        @media screen and (max-width: 767px) {
+            padding: 0 mb(10);
+        }
+    }
+    &__desc{
+        @include font(400,20,23,20,32);
+        @include param(margin-bottom,40,25);
+        text-align: center;
+    }
+    &__border{
+        @include param(padding-top,15,0);
+        @include param(padding-bottom,15,26);
+        @include param(padding-left,22,0);
+        @include param(padding-right,22,0);
+        @include param(margin-left,35,10);
+        @include param(margin-right,32,10);
+        @include font(400,16,25.6,18,28.8);
+        display: grid;
+        @include param(row-gap,12,15);
+        @include param(margin-bottom,40,24);
+        position: relative;
+        overflow: hidden;
+        & > *{
+            z-index: 2;
+        }
+        &::before{
+            content: '';
+            border: 1px solid rgba(1, 10, 13, 0.2);
+            box-shadow: 0px 1859px 520px rgba(44, 2, 64, 0.01), 0px 1190px 476px rgba(44, 2, 64, 0.04), 0px 669px 401px rgba(44, 2, 64, 0.15), 0px 297px 297px rgba(44, 2, 64, 0.26), 0px 74px 164px rgba(44, 2, 64, 0.29), 0px 0px 0px rgba(44, 2, 64, 0.3);
+            left: 0;
+            top: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            @media screen and (max-width: 767px) {
+                content: none;
+            }
+        }
+        &::after{
+            content: '';
+            background: white;
+            left: 1px;
+            top: 1px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            z-index: 1;
+            position: absolute;
+            @media screen and (max-width: 767px) {
+                background: url(../img/thanks/line.png) no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                height: 1px;
+                width: 100%;
+                left: 0;
+                top: auto;
+                bottom: 0;
+            }
+        }
+    }
+    &__top{
+        display: inline-flex;
+        @include param(max-width,584,363);
+        align-items: center;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+    &__img{
+        @include param(border-width,1,1);
+        @include param(margin-right,20,0);
+        @include param(margin-bottom,0,16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 100%;
+            height: auto;
+            @include param(max-width,140,130);
+        }
+    }
+    &__right{
+        align-self: center;
+        display: inline-grid;
+        @include param(row-gap,9,11);
+    }
+    &__content{
+        display: grid;
+        @include param(row-gap,20.5,17);
+        @include param(padding-left,22,9);
+        @include param(padding-right,40,25);
+    }
+    &__logo{
+        img{
+            @include param(width,120,100);
+            height: auto;
+        }
+    }
+}
