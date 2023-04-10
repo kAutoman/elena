@@ -55,56 +55,56 @@
                                 <div class="step2__group">
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="love" value="">
                                             <span>Love</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="luck" value="">
                                             <span>Luck</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="work" value="">
                                             <span>Work</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="family" value="">
                                             <span>Family</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="vitality" value="">
                                             <span>Vitality</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="social" value="">
                                             <span>Social Life</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="spiritually" value="">
                                             <span>Spiritually</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" name="" value="">
+                                            <input type="checkbox" name="self" value="">
                                             <span>Self Development</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__bottom">
-                                <button class="checkout__btn">Continue</button>
+                                <button type="button" class="checkout__btn" onclick="gotoThirdStep()">Continue</button>
                             </div>
                         </form>
                         <div class="checkout__img">
@@ -118,16 +118,7 @@
                 </div>
             </section>
         </main>
-        <!-- <footer class="footer">
-            <div class="container">
-                <div class="footer__wrapper">
-                    <a href="">Home Page</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms of Use</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-        </footer> -->
         <script src="../assets/js/checkout.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     </body>
 </html>

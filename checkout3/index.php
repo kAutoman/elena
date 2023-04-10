@@ -80,7 +80,7 @@
                         </div>
                         <p class="step3__advantages__item">I am fully confident in your money-back guarantee. If for any reason, I am not one hundred percent satisfied with the reading, I can simply send an email within thirty days and receive a full refund, no questions asked. I will even be able to keep the reading and any bonuses that came with it.</p>
                     </div>
-                    <form class="step3__form">
+                    <form class="step3__form" action="/checkout4">
                         <div class="step3__form__wrapper">
                             
 
@@ -123,16 +123,6 @@
                 </div>
             </section>
         </main>
-        <!-- <footer class="footer">
-            <div class="container">
-                <div class="footer__wrapper">
-                    <a href="">Home Page</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms of Use</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-        </footer> -->
         <script src="../assets/js/checkout.js"></script>
     </body>
 </html>

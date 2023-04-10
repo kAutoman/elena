@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,6 +11,21 @@
         <link rel="stylesheet" href="../assets/css/checkout.css">
     </head>
     <body>
+        <?php
+        $amount = 0;
+        switch ($_GET['tariff']){
+            case 3:
+                $amount = 39;
+                break;
+            case 6:
+                $amount = 69;
+                break;
+            case 12:
+                $amount = 97;
+                break;
+        }
+        echo '<script>var amount = '. $amount .'</script>';
+        ?>
         <main class="checkout">
             <section class="steps">
                 <div class="container">
@@ -55,7 +71,9 @@
                             </p>
                         </div>
                     </div>
-                    <form class="step4__form">
+                    <form action="/checkout4/charge.php" class="step4__form" method="post" id="payment-form">
+                        <input type="hidden" name="amount" value="<?php echo $amount; ?>">
+                        <input type="hidden" name="tariff" value="<?php echo $_GET['tariff']; ?>">
                         <div class="step4__form__left">
                             <div class="step4__form__top">
                                 Billing details
@@ -64,16 +82,16 @@
                                 <div class="step4__form__group">
                                     <div class="checkout__form__item">
                                         <p class="checkout__form__item__title">First Fame:</p>
-                                        <input type="text" placeholder="" class="form__item__input__val">
+                                        <input type="text" name="f_name" required placeholder="" class="form__item__input__val">
                                     </div>
                                     <div class="checkout__form__item">
                                         <p class="checkout__form__item__title">Last Name:</p>
-                                        <input type="text" placeholder="" class="form__item__input__val">
+                                        <input type="text" placeholder="" required name="l_name" class="form__item__input__val">
                                     </div>
                                 </div>
                                 <div class="checkout__form__item">
                                     <p class="checkout__form__item__title">Email Address:</p>
-                                    <input type="email" placeholder="" class="form__item__input__val">
+                                    <input type="email" placeholder="" required name="email" class="form__item__input__val">
                                 </div>
                                 <div class="step4__form__group">
                                     <div class="checkout__form__item">
@@ -139,13 +157,13 @@
                                     <div>
                                         <p>Personalized Transit Period Navigator 
                                             (12&nbsp;Months)</p>
-                                        <p>$97.00</p>
+                                        <p>$ <?php echo number_format((float)$amount, 2, '.', ''); ?></p>
                                     </div>
                                 </div>
                                 <div class="step4__form2__group">
                                     <div>
                                         <p>Subtotal</p>
-                                        <p>$97.00</p>
+                                        <p>$ <?php echo number_format((float)$amount, 2, '.', ''); ?></p>
                                     </div>
                                     <div>
                                         <p>Tax</p>
@@ -156,25 +174,23 @@
                                     <p>* 30 days money back guarantee included</p>
                                     <p>* 5 free bonuses included</p>
                                 </div>
-                                <div class="step4__form__credit">
-                                    <p class="step4__form__credit__title">Credit Card</p>
-                                    <input type="text" placeholder="************2736" class="form__item__input__val">
-                                </div>
-                                <div class="step4__form2__group step4__form2__group_card">
-                                    <div>
-                                        <p>
-                                            Expiration (MM/YY)
-                                            <input type="text" placeholder="">
-                                        </p>
-                                        <p>
-                                            Card Security Code
-                                            <input type="text" placeholder="">
-                                        </p>
+
+                                    <div class="form-row">
+                                        <label for="card-element">
+                                            Credit or debit card
+                                        </label>
+                                        <div id="card-element" style="margin-top: 20px">
+                                            <!-- A Stripe Element will be inserted here. -->
+                                        </div>
+
+                                        <!-- Used to display Element errors. -->
+                                        <div id="card-errors" role="alert"></div>
                                     </div>
-                                </div>
-                                <div class="checkout__bottom">
-                                    <button class="checkout__btn">Continue</button>
-                                </div>
+
+                                    <div class="checkout__bottom">
+                                        <button type="button" onclick="confirmPayment()" class="checkout__btn">Continue</button>
+                                    </div>
+
                             </div>
                         </div>
                     </form>
@@ -184,16 +200,8 @@
                 </div>
             </section>
         </main>
-        <!-- <footer class="footer">
-            <div class="container">
-                <div class="footer__wrapper">
-                    <a href="">Home Page</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms of Use</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-        </footer> -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="https://js.stripe.com/v3/"></script>
         <script src="../assets/js/checkout.js"></script>
     </body>
 </html>

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "stripe/stripe-php": "^10.12",
+        "kodols/php-mysql-library": "^1.2"
+    }
+}

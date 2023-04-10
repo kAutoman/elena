@@ -59,6 +59,7 @@
                                         <div data-name="month" class="custom_select">
                                             <p class="custom_select__current">Month</p>
                                             <ul class="custom_select__list">
+                                                <input type="hidden" class="hidden_input" name="birth_month" value=""/>
                                                 <li data-val="" class="custom_select__item custom_select__item_active">
                                                     Month
                                                 </li>
@@ -70,6 +71,7 @@
                                         <div data-name="day" class="custom_select">
                                             <p class="custom_select__current">Day</p>
                                             <ul class="custom_select__list">
+                                                <input type="hidden" class="hidden_input" name="birth_day" value=""/>
                                                 <li data-val="" class="custom_select__item custom_select__item_active">
                                                     Day
                                                 </li>
@@ -79,7 +81,7 @@
                                             </ul>
                                         </div>
                                         <div data-name="year" class="checkout__form__item">
-                                            <input type="number" min="1900" max="2100" placeholder="Year" class="form__item__input__val form__item__input__val_name">
+                                            <input type="number" min="1900" max="2100" placeholder="Year" name="birth_year" class="form__item__input__val form__item__input__val_name">
                                         </div>
                                     </div>
                                 </div>
@@ -89,6 +91,7 @@
                                         <div data-name="hour" class="custom_select">
                                             <p class="custom_select__current">Hour</p>
                                             <ul class="custom_select__list">
+                                                <input type="hidden" class="hidden_input" name="birth_hour" value=""/>
                                                 <li data-val="" class="custom_select__item custom_select__item_active">
                                                     Hour
                                                 </li>
@@ -100,6 +103,7 @@
                                         <div data-name="hour" class="custom_select">
                                             <p class="custom_select__current">Minutes</p>
                                             <ul class="custom_select__list">
+                                                <input type="hidden" class="hidden_input" name="birth_min" value=""/>
                                                 <li data-val="" class="custom_select__item custom_select__item_active">
                                                     Minutes
                                                 </li>
@@ -108,16 +112,6 @@
                                                 <?php } ?>
                                             </ul>
                                         </div>
-                                        <!-- <div data-name="hour" class="custom_select">
-                                            <p class="custom_select__current">AM / PM</p>
-                                            <ul class="custom_select__list">
-                                                <li data-val="" class="custom_select__item custom_select__item_active">
-                                                    AM / PM
-                                                </li>
-                                                <li data-val="01" class="custom_select__item">AM</li>
-                                                <li data-val="02" class="custom_select__item">PM</li>
-                                            </ul>
-                                        </div> -->
                                     </div>
                                 </div>
                                 
@@ -127,6 +121,7 @@
                                         <div data-name="hour" class="custom_select">
                                             <p class="custom_select__current">Country</p>
                                             <ul class="custom_select__list">
+                                                <input type="hidden" class="hidden_input" name="birth_country" value=""/>
                                                 <li data-val="" class="custom_select__item custom_select__item_active">
                                                     Country
                                                 </li>
@@ -389,7 +384,7 @@
                                 </div>
                                 <div class="checkout__form__item">
                                     <p class="checkout__form__item__title">Your Town or City of Birth:</p>
-                                    <input type="text" placeholder="Please Write" class="form__item__input__val form__item__input__val_name">
+                                    <input type="text" placeholder="Please Write" name="birth_town" class="form__item__input__val form__item__input__val_name">
                                 </div>
                             </div>
                             <div class="checkout__bottom">
@@ -407,16 +402,6 @@
                 </div>
             </section>
         </main>
-        <!-- <footer class="footer">
-            <div class="container">
-                <div class="footer__wrapper">
-                    <a href="">Home Page</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms of Use</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-        </footer> -->
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="../assets/js/checkout.js"></script>
     </body>
