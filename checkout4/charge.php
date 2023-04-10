@@ -29,6 +29,7 @@ $db = $KML->connect();
 $insert_id = $db->insert('transactions', [
     'f_name' => $_POST['f_name'],
     'l_name' => $_POST['l_name'],
+    'email' => $_POST['email'],
     'amount' => $amount,
     'ref_url' => $charge->receipt_url,
     'result' => $charge->status,
