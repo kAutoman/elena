@@ -1,12 +1,13 @@
 <?php
 require_once '../vendor/autoload.php';
+require_once '../wp-config.php';
 
 $KML = new \Kodols\MySQL\Library;
 $config = $KML->newConfiguration();
-$config->setHostname('localhost');
-$config->setUsername('root');
-$config->setPassword('');
-$config->setDatabase('test');
+$config->setHostname(DB_HOST);
+$config->setUsername(DB_USER);
+$config->setPassword(DB_PASSWORD);
+$config->setDatabase(DB_NAME);
 $KML->attachConfiguration($config);
 /*
  * Get the server object

@@ -1,5 +1,6 @@
 <?php
 require_once '../vendor/autoload.php';
+require_once '../wp-config.php';
 // Set your secret key. Remember to switch to your live secret key in production.
 // See your keys here: https://dashboard.stripe.com/apikeys
 \Stripe\Stripe::setApiKey('sk_test_51MoOFsKuZdcMdc5tI0sASY2shmMzxe5BI9qRYPbnNsB6fJZNtytxlnXTwrdIFI4Cvou134uCzV44YAshh5Ln4l1I00M9mpEAXn');
@@ -17,10 +18,10 @@ $charge = \Stripe\Charge::create([
 
 $KML = new \Kodols\MySQL\Library;
 $config = $KML->newConfiguration();
-$config->setHostname('localhost');
-$config->setUsername('root');
-$config->setPassword('');
-$config->setDatabase('test');
+$config->setHostname(DB_HOST);
+$config->setUsername(DB_USER);
+$config->setPassword(DB_PASSWORD);
+$config->setDatabase(DB_NAME);
 $KML->attachConfiguration($config);
 /*
  * Get the server object
