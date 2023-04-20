@@ -51,7 +51,7 @@
                             <div class="checkout__form">
                                 <div class="checkout__form__item">
                                     <p class="checkout__form__item__title">Your Full Name:</p>
-                                    <input type="text" placeholder="Name" name="username" class="form__item__input__val form__item__input__val_name">
+                                    <input type="text" placeholder="Name" name="username" required class="form__item__input__val form__item__input__val_name">
                                 </div>
                                 <div class="checkout__form__item">
                                     <p class="checkout__form__item__title">Your Birthdate:</p>

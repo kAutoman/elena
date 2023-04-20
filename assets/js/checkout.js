@@ -25,6 +25,23 @@ for (const option of document.querySelectorAll(".custom_select__item")) {
 }
 function gotoSecondStep() {
     let data = $('.checkout__content').serializeArray();
+    // if($('input')){
+    //     alert("User name can't empty!");
+    //     return;
+    // }
+    let validationResult = true;
+    let emptyFields = '';
+    $('input').map(index => {
+        if(!data[index].value){
+            emptyFields += data[index].name + ', ';
+            validationResult = false;
+        }
+    })
+    if (validationResult === false){
+        alert(emptyFields+" can't empty");
+        return;
+    }
+
     if(!data){
         alert('Form is Empty!');
     }
