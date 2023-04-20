@@ -96,31 +96,32 @@
                                 <div class="step4__form__group">
                                     <div class="checkout__form__item">
                                         <p class="checkout__form__item__title">Street Address:</p>
-                                        <input type="text" placeholder="" class="form__item__input__val">
+                                        <input type="text" placeholder="" name="street" class="form__item__input__val">
                                     </div>
                                     <div class="checkout__form__item">
                                         <p class="checkout__form__item__title">Apartment, suite, init, etc.
                                             (optional)</p>
-                                        <input type="text" placeholder="" class="form__item__input__val">
+                                        <input type="text" placeholder="" name="apartment" class="form__item__input__val">
                                     </div>
                                 </div>
                                 <div class="step4__form__group">
                                     <div class="checkout__form__item">
                                         <p class="checkout__form__item__title">Town / City:</p>
-                                        <input type="text" placeholder="" class="form__item__input__val">
+                                        <input type="text" placeholder="" name="town" class="form__item__input__val">
                                     </div>
                                     <div class="checkout__form__item">
                                         <p class="checkout__form__item__title">Province:</p>
-                                        <input type="text" placeholder="" class="form__item__input__val">
+                                        <input type="text" placeholder="" name="province" class="form__item__input__val">
                                     </div>
                                 </div>
                                 <div class="checkout__form__item">
                                     <p class="checkout__form__item__title">Postal Code:</p>
-                                    <input type="text" placeholder="" class="form__item__input__val">
+                                    <input type="text" placeholder="" name="postal_code" class="form__item__input__val">
                                 </div>
                                 <div class="checkout__form__item">
                                     <p class="checkout__form__item__title">Country / Region:</p>
-                                    <input type="text" placeholder="" class="form__item__input__val">
+                                    <input type="text" placeholder="" name="country" class="form__item__input__val">
+                                    <input type="hidden" placeholder="" name="question_id" id="question_id">
                                 </div>
                                 <div class="step4__form__switch">
                                     <label class="switch">
@@ -203,5 +204,18 @@
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="https://js.stripe.com/v3/"></script>
         <script src="../assets/js/checkout.js"></script>
+        <script>
+            $(document).ready(function(){
+                const form1Data = localStorage.getItem('form_data');
+                let decoded = JSON.parse(form1Data);
+                let question_id;
+                decoded.map(data => {
+                    if(data.question_id){
+                        question_id = data.question_id;
+                    }
+                })
+                $('#question_id').val(question_id);
+            })
+        </script>
     </body>
 </html>

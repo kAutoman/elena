@@ -26,7 +26,20 @@ $KML->attachConfiguration($config);
  * Get the server object
  */
 $db = $KML->connect();
-$insert_id = $db->insert('transactions', [
+$contact_id = $db->insert('user_contacts', [
+    'f_name' => $_POST['f_name'],
+    'l_name' => $_POST['l_name'],
+    'email' => $_POST['email'],
+    'street' => $_POST['street'],
+    'town' => $_POST['town'],
+    'province' => $_POST['province'],
+    'postal_code' => $_POST['postal_code'],
+    'country' => $_POST['country'],
+    'apartment' => $_POST['apartment'],
+    'question_id' => $_POST['question_id'],
+    'created_at' => date('Y-m-d H:i:s'),
+]);
+$transaction_id = $db->insert('transactions', [
     'f_name' => $_POST['f_name'],
     'l_name' => $_POST['l_name'],
     'email' => $_POST['email'],
@@ -36,8 +49,10 @@ $insert_id = $db->insert('transactions', [
     'created_at' => date('Y-m-d H:i:s'),
     'description' => 'Astrology checkout',
     'payment_id' => $charge->id,
-    'tariff' => $_POST['tariff']
+    'tariff' => $_POST['tariff'],
+    'contact_id'=> $contact_id
 ]);
+
 echo "<script>alert('success!'); location.href='/'</script>";
 
 

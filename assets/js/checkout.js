@@ -45,6 +45,7 @@ function gotoSecondStep() {
     if(!data){
         alert('Form is Empty!');
     }
+    
     localStorage.setItem('form_data',JSON.stringify(data));
     location.href="/checkout2"
 }
@@ -54,14 +55,28 @@ function gotoThirdStep() {
     let decoded = JSON.parse(form1Data);
     let favThings = {
         name: 'aspects',
-        value: data
+        value: JSON.stringify(data)
     }
     decoded.push(favThings);
     if(!data){
         alert('Form is Empty!');
     }
-    localStorage.setItem('form_data',JSON.stringify(decoded));
-    location.href="/checkout3"
+    $.ajax({
+        url: "/checkout2/action.php",
+        data: decoded,
+        method: 'POST',
+        success: function(new_id) {
+            let question_data = {
+                question_id: new_id,
+            }
+            decoded.push(question_data);
+            localStorage.setItem('form_data',JSON.stringify(decoded));
+            location.href="/checkout3";
+        },
+        error: function(err) {
+            console.error(err);
+        }
+    });
 }
 
 window.addEventListener('click', function(e) {
